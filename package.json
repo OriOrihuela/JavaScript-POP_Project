@@ -1,0 +1,20 @@
+{
+  "name": "JavaScript-POP_Project",
+  "version": "1.0.0",
+  "description": "From time to time, usually between 8 and 10 at night, Mariano transforms into an elusive large octopus with a long white beard, what in \r Galicia we call a wolf-octopus.",
+  "main": "createTables.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OriOrihuela/JavaScript-POP_Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OriOrihuela/JavaScript-POP_Project/issues"
+  },
+  "homepage": "https://github.com/OriOrihuela/JavaScript-POP_Project#readme"
+}
