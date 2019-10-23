@@ -1,7 +1,7 @@
 /**
  * The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
  * With strict mode, you can not, for example, use undeclared variables.
- * It also serves to use new JS functionalities
+ * It also serves to use new JS functionalities.
  */
 "use strict";
 
@@ -15,7 +15,7 @@ function setPhi(tables) {
   // We get all the properties in the JS object ("mejillones", "Panorama"...) and for each property...
   Object.keys(tables).forEach(
     /**
-     * We create a new varaible called "phi" and, instantly, we set its value using calculatePhi function through the
+     * We create a new variable called "phi" and, instantly, we set its value using calculatePhi function through the
      * "correlationTable" value also inside the action being checked.
      */
     action =>
@@ -34,10 +34,10 @@ function setPhi(tables) {
 function calculatePhi(correlationTable) {
   if (isCorrelationTableValid(correlationTable)) {
     /**
-     * correlationTable[1][1] YES octopus, YES X.
-     * correlationTable[0][0] NOT octopus, NOT X.
-     * correlationTable[1][0] YES octopus, NOT X.
-     * correlationTable[0][1] NOT octopus, YES X.
+     * correlationTable[1][1] YES octopus, YES action.
+     * correlationTable[0][0] NOT octopus, NOT action.
+     * correlationTable[1][0] YES octopus, NOT action.
+     * correlationTable[0][1] NOT octopus, YES action.
      */
     const DIVIDEND =
       correlationTable[1][1] * correlationTable[0][0] -
@@ -46,8 +46,8 @@ function calculatePhi(correlationTable) {
      * Square root of:
      * - correlationTable[1][0] + correlationTable[1][1] --> Whenever octopus is TRUE.
      * - correlationTable[0][0] + correlationTable[0][1] --> Whenever octopus is FALSE.
-     * - correlationTable[0][1] + correlationTable[1][1] --> Whenever X is TRUE.
-     * - correlationTable[0][0] + correlationTable[1][0] --> Whenever X is FALSE.
+     * - correlationTable[0][1] + correlationTable[1][1] --> Whenever action is TRUE.
+     * - correlationTable[0][0] + correlationTable[1][0] --> Whenever action is FALSE.
      */
     const DIVISOR = Math.sqrt(
       (correlationTable[1][0] + correlationTable[1][1]) *
