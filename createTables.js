@@ -65,7 +65,7 @@ function getAllActions(DIARY, property) {
       }
     });
   });
-  // Return of the list of actions made every day by Mariano
+  // Return of the list of actions made every day by Mariano.
   return list;
 }
 
@@ -82,14 +82,14 @@ function getAllTables(DIARY) {
   // We call the getAllActions function and for each action...
   getAllActions(DIARY, "eventos").forEach(action => {
     /**
-     * Set the action into the previous JS object varaible "tables" and also create another
+     * Set the action into the previous JS object variable "tables" and also create another
      * JS object ("correlationTable") into the same action property.
      */
     tables[action] = {
       correlationTable: createTable(DIARY, action, "eventos")
     };
   });
-  // Return of all the actions made by Mariano and their respectives correlationTables
+  // Return of all the actions made by Mariano and their respectives correlationTables.
   return tables;
 }
 
