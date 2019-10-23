@@ -22,11 +22,11 @@ const setPhi = require("./phi").setPhi;
  *
  * - The 2nd and 3rd one check if the variable "tables" has every action made by Mariano and its correlationTable value.
  *
- * - The third one checks if the variable "tables" has every action made by Mariano and its correlationTable and phi values.
+ * - The 4th one checks if the variable "tables" has every action made by Mariano and its correlationTable and phi values.
  */
 let table = createTable(DIARY, "vieiras", "eventos");
 
-// Returns true.
+// 1st test -> Returns true.
 console.log(
   table[1][1] === 2 &&
     table[0][1] === 7 &&
@@ -37,15 +37,16 @@ console.log();
 
 let tables = getAllTables(DIARY);
 
-// Returns true.
+// 2nd test -> Returns true.
 console.log(tables.hasOwnProperty("vieiras"));
 console.log();
 
-// Returns all the actions compressed into a JS object. Every action has its correlationTable value.
+// 3rd test -> Returns all the actions compressed into a JS object. Every action has its correlationTable value.
 console.log(tables);
 console.log();
 
+// Here we set the "phi" property to every action registered, using its own correlationTable.
 setPhi(tables);
 
-// Returns all the actions compressed into a JS object. Every action has its correlationTable and phi values.
+// 4th test -> Returns all the actions compressed into a JS object. Every action has its correlationTable and phi values.
 console.log(tables);
