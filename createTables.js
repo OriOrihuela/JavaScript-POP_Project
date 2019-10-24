@@ -15,7 +15,7 @@
  * @param {*} action For example, "eating pasta".
  * @param {*} property The "eventos" property to get checked everyday.
  */
-function createTable(DIARY, action, property) {
+function createTable(DIARY,property,action) {
   // These are the values that will be displayed in the correlationTable.
   let actionAppearsAndBecameOctopus = 0;
   let actionAppearsAndNotBecameOctopus = 0;
@@ -53,20 +53,20 @@ function createTable(DIARY, action, property) {
  */
 function getAllActions(DIARY, property) {
   // Initialize a new array.
-  let list = [];
+  let tables = {};
 
   // For each "day" (JS object {})...
   DIARY.forEach(day => {
     // For each "action" made that "day"...
     day[property].forEach(action => {
       // If the previous initialized array does not have that action, we push it into it.
-      if (!list.includes(action)) {
-        list.push(action);
+      if (!Object.hasOwnProperty(action)) {
+        tables[action] = {name: action};
       }
     });
   });
   // Return of the list of actions made every day by Mariano.
-  return list;
+  return tables;
 }
 
 /**
@@ -75,23 +75,23 @@ function getAllActions(DIARY, property) {
  * to getAllActions and createTable functions.
  * @param {*} DIARY The DIARY of Mariano, placed in diary.js.
  */
-function getAllTables(DIARY) {
-  // Initialize the JS object.
-  let tables = {};
-
+function addNewProperty(object, property, method,methodArgs,propiedadObjeto) {
+  
   // We call the getAllActions function and for each action...
-  getAllActions(DIARY, "eventos").forEach(action => {
+  Object.keys(object).forEach(action => {
     /**
      * Set the action into the previous JS object variable "tables" and also create another
      * JS object ("correlationTable") into the same action property.
      */
-    tables[action] = {
-      correlationTable: createTable(DIARY, action, "eventos")
-    };
+    createNewProperty.call(object[action], property, method, methodArgs,propiedadObjeto);
   });
-  // Return of all the actions made by Mariano and their respectives correlationTables.
-  return tables;
+}
+
+function createNewProperty(property, method, args,propiedadObjeto) {
+  args === null || args === undefined
+    ? (this[property] = method.call(this,this[propiedadObjeto]))
+    : (this[property] = method(...args,this[propiedadObjeto]));
 }
 
 // Here we export the desired functionalities.
-module.exports = { createTable, getAllTables };
+module.exports = { addNewProperty, createTable, getAllActions };
