@@ -34,3 +34,17 @@
 //     }
 //   }
 // );
+
+// - Code to print the tables JS object in the browser. -
+
+// Object.keys(tables).forEach(action => {
+//   var z = document.createElement("p");
+//   // console.table('action :', action);
+//   z.innerHTML =
+//     tables[action].name +
+//     ": " +
+//     tables[action].correlationTable +
+//     ", " +
+//     tables[action].phi;
+//   document.getElementById("test").appendChild(z);
+// });

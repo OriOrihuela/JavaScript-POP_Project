@@ -53,6 +53,7 @@ function isCorrelationTableValid(correlationTable) {
     correlationTable !== null &&
     Array.isArray(correlationTable) === true &&
     Array.isArray(correlationTable[0]) === true &&
+    Array.isArray(correlationTable[1]) === true &&
     correlationTable.length === 2 &&
     correlationTable[0].length === 2 &&
     correlationTable[1].length === 2
@@ -61,5 +62,6 @@ function isCorrelationTableValid(correlationTable) {
 
 // Here we export the necessary functionalities.
 module.exports = {
-  calculatePhi
+  calculatePhi,
+  isCorrelationTableValid
 };

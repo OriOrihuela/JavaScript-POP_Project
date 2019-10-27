@@ -144,4 +144,9 @@ function createNewProperty(property, method, args, objectProperty) {
 }
 
 // Here we export the desired functionalities.
-module.exports = { addNewProperty, createTable, getAllActions };
+module.exports = {
+  addNewProperty,
+  createTable,
+  getAllActions,
+  createNewProperty
+};
