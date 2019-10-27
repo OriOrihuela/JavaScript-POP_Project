@@ -1,2 +1,5 @@
 # Avoid the historical of the changes
 .history/
+
+# Avoid node_modules folder
+node_modules/
