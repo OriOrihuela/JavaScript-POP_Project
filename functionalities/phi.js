@@ -6,24 +6,6 @@
 "use strict";
 
 /**
- * This function runs over all the "tables" (JS object) and sets up a new property ("phi") in every action registered in "tables".
- * To calculate that value, is called calculatePhi function, using by parameter the object property "correlationTable" placed
- * in every action registered in "tables" JS object.
- * @param {*} tables The entire events
- */
-function setPhi(tables) {
-  // We get all the properties in the JS object ("mejillones", "Panorama"...) and for each property...
-  Object.keys(tables).forEach(
-    /**
-     * We create a new variable called "phi" and, instantly, we set its value using calculatePhi function through the
-     * "correlationTable" value also inside the action being checked.
-     */
-    action =>
-      (tables[action]["phi"] = calculatePhi(tables[action]["correlationTable"]))
-  );
-}
-
-/**
  * The Phi φ Correlation is a measure of the dependence between variables (“variables” in the statistical sense, not in the
  * programming one). It is expressed as a coefficient whose value falls in the range of −1 to 1.
  * Correlation 0 means that the variables are not related, while correlation 1 means that the variables are perfectly related:
@@ -71,6 +53,7 @@ function isCorrelationTableValid(correlationTable) {
     correlationTable !== null &&
     Array.isArray(correlationTable) === true &&
     Array.isArray(correlationTable[0]) === true &&
+    Array.isArray(correlationTable[1]) === true &&
     correlationTable.length === 2 &&
     correlationTable[0].length === 2 &&
     correlationTable[1].length === 2
@@ -79,5 +62,6 @@ function isCorrelationTableValid(correlationTable) {
 
 // Here we export the necessary functionalities.
 module.exports = {
-  setPhi
+  calculatePhi,
+  isCorrelationTableValid
 };
