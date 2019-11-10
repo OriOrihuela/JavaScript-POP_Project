@@ -6,7 +6,7 @@
 "use strict";
 
 // We need to import the diary.
-const DIARY = require("../../domain/diary").DIARY;
+const DIARY = require("../../domain/diary");
 
 /**
  * ---- TESTS FOR THE DIARY ----
