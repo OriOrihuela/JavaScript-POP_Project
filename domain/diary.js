@@ -630,4 +630,4 @@ const DIARY = [
   }
 ];
 
-module.exports =  DIARY ;
+module.exports = DIARY;
