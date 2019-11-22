@@ -6,7 +6,10 @@
 #main-pop {
   height: 100%;
   width: 100%;
+  cursor: url("../../images/icons/pulpo.png"),auto;
+
 }
+
 #main-pop-text {
   font-weight: bold;
   text-align: center;
