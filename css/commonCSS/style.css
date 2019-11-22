@@ -1,0 +1,15 @@
+/* ---- MAIN & BOXES ---- */
+main {
+  padding-top: 50px;
+}
+
+main .row {
+  margin-bottom: 20px;
+}
+
+.box {
+  height: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+/* ---- END MAIN & BOXES ---- */
