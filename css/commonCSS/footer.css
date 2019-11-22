@@ -1,0 +1,10 @@
+/* ---- FOOTER ---- */
+footer div.row {
+    background-color: var(--main-color-maastricht_blue);
+    color: var(--main-color-heliotrope);
+    text-align: center;
+    padding: 1.5%;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+  /* ---- END FOOTER ---- */

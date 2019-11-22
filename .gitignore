@@ -3,3 +3,7 @@
 
 # Avoid node_modules folder
 node_modules/
+
+# Ignoring development and production folders
+.cache
+dist
