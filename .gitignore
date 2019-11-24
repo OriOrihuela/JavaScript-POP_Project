@@ -1,9 +1,9 @@
-# Avoid the historical of the changes
+# Avoid the historical of the changes.
 .history/
 
-# Avoid node_modules folder
+# Avoid node_modules folder.
 node_modules/
 
-# Ignoring development and production folders
+# Ignoring development and production folders.
 .cache
 dist
