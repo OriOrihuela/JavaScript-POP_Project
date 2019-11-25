@@ -7,10 +7,17 @@
   height: 100%;
   width: 100%;
 }
-
 #main-pop-text {
   font-weight: bold;
   text-align: center;
+  font-size: larger;
 }
+
 /* ---- END 2ND SECTION ---- */
+
+/* ---- SHARED CSS BETWEEN SECTIONS ---- */
+.description {
+  text-align: justify;
+}
+/* ---- END OF SHARED CSS BETWEEN SECTIONS ---- */
 /* ---- END MAIN ---- */
