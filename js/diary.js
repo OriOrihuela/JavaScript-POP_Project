@@ -7,12 +7,26 @@ const DIARY = require("../domain/diary");
 let htmlDiary = document.getElementById("diary");
 
 let daysInCalendar = 1;
-DIARY.forEach(day => {
-  let dayToAdd = document.createElement("span");
-  dayToAdd.innerHTML = daysInCalendar;
-  daysInCalendar++;
-  htmlDiary.appendChild(dayToAdd);
+let index = 0;
+
+DIARY.forEach(() => {
+    let dayToAdd = document.createElement("span");
+    dayToAdd.innerHTML = daysInCalendar;
+    dayToAdd.onclick = function() {
+        getDay(this.innerHTML - 1);
+    }
+    index++;
+    daysInCalendar++;
+    htmlDiary.appendChild(dayToAdd);
 });
+
+
+function getDay(day) {
+
+
+    console.log(DIARY[day]);
+
+}
 
 // DIARY.forEach(day => {
 //   let node = document.createElement("ul");
