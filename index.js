@@ -17,7 +17,7 @@ app.get("/", function(request, response) {
   response.render("index");
 });
 
-// Just a console to check that everything is running under control.
+// Listening to the port configured by Heroku || 8080.
 app.listen(port, function() {
   console.log("Our app is running on http://localhost:" + port);
 });
