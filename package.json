@@ -4,7 +4,7 @@
   "description": "From time to time, usually between 8 and 10 at night, Mariano transforms into an elusive large octopus with a long white beard, what in \r Galicia we call a wolf-octopus.",
   "main": "index.html",
   "scripts": {
-    "start": "node index.js",
+    "start": "parcel index.html",
     "test": "jest || exit 0"
   },
   "repository": {
