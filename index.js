@@ -1,17 +1,20 @@
-let http = require("http");
-let fs = require("fs");
+const PORT = process.env.PORT || 1212;
+const EXPRESS = require("express");
+const APP = EXPRESS();
 
-function onRequest(request, response) {
-  response.writeHead(200, { "Content-Type": "text/plain" });
-  fs.readFile("./index.html", null, function(error, data) {
-    if (error) {
-      response.writeHead(404);
-      response.write("File not found!");
-    } else {
-      response.write(data);
-    }
-    response.end();
+const HTTP = require("http");
+const SERVER = HTTP.Server(APP);
+
+APP.use(EXPRESS.static("client"));
+
+SERVER.listen(PORT, function() {
+  console.log("App running!");
+});
+
+const IO = require("socket.io")(SERVER);
+
+IO.on("connection", function(socket) {
+  socket.on("message", function(message) {
+    IO.emit("message", message);
   });
-}
-
-http.createServer(onRequest).listen("https://pop-project.herokuapp.com/");
+});
