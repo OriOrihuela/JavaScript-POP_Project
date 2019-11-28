@@ -24,6 +24,9 @@ DIARY.forEach(day => {
     removeCircleClass(spansSelected);
     // Once the "span" element is clicked, we add to it the class "circle".
     dayToAdd.classList.add("circle");
+    // Here, we change the col size of the calendar, depending if we have selected a day or not.
+    document.getElementById("col-calendar").classList.remove("col-12");
+    document.getElementById("col-calendar").classList.add("col-6");
   };
   // Increment the counter of days in the calendar.
   daysInCalendar++;
@@ -37,33 +40,50 @@ DIARY.forEach(day => {
  * @param {HTMLSpanElement} spansSelected
  */
 function removeCircleClass(spansSelected) {
+  // This for runs over all "spans" elements passed by parameter.
   for (let index = 0; index < spansSelected.length; index++) {
+    // Initialize the variable "element" for each element within the array.
     const element = spansSelected[index];
-    if (element.classList.contains("circle")) {
+    // If the element has the "circle" class, then remove it.
+    if (element.classList.contains("circle"))
       element.classList.remove("circle");
-    }
   }
 }
 
 /**
- * 
- * @param {JS Object} day 
+ * This function assigns a day from Mariano's diary to an "p" HTML element in the user view.
+ * Depending on wether Mariano transforms into an octopus or not, there will be displayed an octopus as
+ * an image or not.
+ * @param {JS Object} day
  */
 function displayDay(day) {
+  /**
+   * In this line, we get the <img> HTML element with id "pop-image" and set to it
+   * and image, depending on whether Mariano transforms into octopus or not that day.
+   */
   document
     .getElementById("pop-image")
     .setAttribute(
       "src",
       day.pulpo ? "/pop.45fff62b.png" : "/canitaBrava.3e228692.png"
     );
+  /**
+   * Here we get the <p> HTML element with id "eventos" and pass the value of
+   * the property "eventos" contained in the actual day.
+   */
   document.getElementById("eventos").innerHTML = day["eventos"];
+  /**
+   * Just because a day has been selected in the calendar, we need to display
+   * the card where the information about that day will be seen.
+   */
+
   removeHidden(document.getElementById("card-container"));
 }
 
 /**
  * This function checks if the element passed by parameter has the attr "hidden" set.
  * If so, removes the attr.
- * @param {HTMLElement} element 
+ * @param {HTMLElement} element
  */
 function removeHidden(element) {
   if (element.hasAttribute("hidden")) element.removeAttribute("hidden");

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="./css/commonCSS/palette.css" />
     <link rel="stylesheet" href="./css/commonCSS/footer.css" />
     <link rel="stylesheet" href="./css/commonCSS/header.css" />
-    <link rel="stylesheet" href="./css/commonCSS/html.css" />
   </head>
   <body>
     <header>
@@ -35,14 +34,20 @@
     <!-- MAIN CONTENT -->
     <main role="main">
       <section class="row">
-        <div class="col-6">
+        <div id="col-calendar" class="col-12">
           <div id="calendar" class="container">
-            <div class="calendarTitle"><i>Select a day from Mariano's diary</i></div>
+            <div class="calendarTitle">
+              <i>Select a day from Mariano's diary</i>
+            </div>
           </div>
         </div>
         <div id="card-container" class="col-6" hidden>
           <div id="card" class="container">
-            <img alt="pulpo-or-not" id="pop-image" class="mt-4">
+            <img
+              src="./images/canitaBrava.png"
+              alt="pulpo-or-not"
+              id="pop-image"
+            />
             <div id="card-body">
               <h4><i>Eventos</i></h4>
               <p id="eventos"></p>
