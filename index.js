@@ -1,20 +1,12 @@
-const PORT = process.env.PORT || 1212;
-const EXPRESS = require("express");
+// server.js
+const EXPRESS = require('express');
 const APP = EXPRESS();
+const PATH = require("path");
 
-const HTTP = require("http");
-const SERVER = HTTP.Server(APP);
-
-APP.use(EXPRESS.static("client"));
-
-SERVER.listen(PORT, function() {
-  console.log("App running!");
+APP.get('/', function(request, response) {
+    response.sendFile(PATH.join(__dirname, 'index.html'));
 });
 
-const IO = require("socket.io")(SERVER);
-
-IO.on("connection", function(socket) {
-  socket.on("message", function(message) {
-    IO.emit("message", message);
-  });
+APP.listen(process.env.PORT || 4000, function(){
+    console.log('Your node js server is running');
 });
