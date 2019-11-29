@@ -1,0 +1,72 @@
+/* ---- MAIN ---- */
+main {
+  position: relative;
+  min-height: 69vh;
+  padding-bottom: 50px;
+}
+/* ---- 1st SECTION - DESCRIPTION ---- */
+#intro {
+  text-align: center;
+  font-weight: bold;
+}
+/* ---- END 1st SECTION - DESCRIPTION ---- */
+
+/* ---- 2nd SECTION ---- */
+
+/* ---- COL ---- */
+#button-col {
+  text-align: center;
+  z-index: 1;
+  border: none;
+  overflow: hidden;
+  transition: color 0.4s ease-in-out;
+}
+/* ---- END COL ---- */
+
+/* ---- BUTTON ---- */
+#button-show-actions {
+  border: none;
+  background: var(--main-color-maastricht_blue) !important;
+  background: var(--main-color-maastricht_blue) !important;
+  background: var(--main-color-maastricht_blue) !important;
+  background: var(--main-color-maastricht_blue) !important;
+  z-index: 1;
+  position: relative;
+  transition: color 0.4s ease-in-out;
+}
+#button-show-actions:hover p {
+  color: white;
+}
+#button-show-actions::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  background-color: var(--main-color-heliotrope);
+  transform-origin: center;
+  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+  transition: transform 0.45s ease-in-out;
+}
+#button-show-actions:hover {
+  cursor: pointer;
+}
+#button-show-actions:hover::before {
+  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+/* ---- TEXT ---- */
+#show-actions {
+  position: relative;
+  top: 5px;
+  color: var(--main-color-heliotrope);
+  font-weight: bold;
+  font-size: larger;
+}
+/* ---- END TEXT ---- */
+/* ---- END BUTTON ---- */
+/* ---- END 2nd SECTION ---- */
+/* ---- END MAIN ---- */

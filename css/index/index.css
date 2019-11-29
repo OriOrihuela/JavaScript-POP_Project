@@ -10,12 +10,6 @@
   font-size: larger;
 }
 /* ---- END 2ND SECTION ---- */
-
-/* ---- SHARED CSS BETWEEN SECTIONS ---- */
-.description {
-  text-align: justify;
-}
-/* ---- END OF SHARED CSS BETWEEN SECTIONS ---- */
 /* ---- END MAIN ---- */
 
 /*---  BUBBLES ---*/

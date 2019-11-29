@@ -5,7 +5,6 @@ main {
   padding-top: 100px !important;
   padding-bottom: 50px;
 }
-/* ---- END MAIN ---- */
 
 /* ---- CALENDAR ---- */
 .calendarTitle {
@@ -71,31 +70,4 @@ main {
   }
 }
 /* ---- END CARD ---- */
-
-/* ---- SHARED CSS ---- */
-.container {
-  border-radius: 5px;
-  overflow: hidden;
-  display: block;
-  margin-bottom: 10px;
-  box-shadow: 0 0 10px #201d1c;
-  margin: 0 auto;
-  padding: 0 10px 10px 10px;
-  background: -webkit-linear-gradient(
-    var(--main-color-vivid_sky_blue),
-    var(--main-color-heliotrope)
-  ) !important;
-  background: -o-linear-gradient(
-    var(--main-color-vivid_sky_blue),
-    var(--main-color-heliotrope)
-  ) !important;
-  background: -moz-linear-gradient(
-    var(--main-color-vivid_sky_blue),
-    var(--main-color-heliotrope)
-  ) !important;
-  background: linear-gradient(
-    var(--main-color-vivid_sky_blue),
-    var(--main-color-heliotrope)
-  ) !important;
-}
-/* ---- END OF SHARED CSS ---- */
+/* ---- END MAIN ---- */
