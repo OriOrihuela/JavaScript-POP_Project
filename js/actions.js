@@ -13,8 +13,8 @@ showActions.addEventListener("click", function() {
     let actionName = document.createElement("p");
     let phi = document.createElement("p");
 
-    actionName.innerHTML = action["name"];
-    phi.innerHTML = action["phi"];
+    actionName.innerHTML = ACTION_UTILS[action]["name"];
+    phi.innerHTML = ACTION_UTILS[action]["phi"];
     
     actionContainer.appendChild(actionName);
     actionContainer.appendChild(phi);
