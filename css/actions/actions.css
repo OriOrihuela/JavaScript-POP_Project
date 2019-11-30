@@ -57,6 +57,9 @@ main {
 #button-show-actions:hover::before {
   transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
+#button-show-actions:focus {
+  border: none;
+}
 
 /* ---- TEXT ---- */
 #show-actions {
@@ -66,6 +69,14 @@ main {
   font-weight: bold;
   font-size: larger;
 }
+
+/* ---- Action Container ----*/
+
+
+#actions-container {
+  height: 300px;
+}
+/* ---- END Action Container ----*/
 /* ---- END TEXT ---- */
 /* ---- END BUTTON ---- */
 /* ---- END 2nd SECTION ---- */

@@ -5,19 +5,53 @@ const ACTION_UTILS = require("../functionalities/index");
 
 let actionsContainer = document.getElementById("actions-container");
 
-let showActions = document.getElementById("show-actions");
+let buttonShowActions = document.getElementById("button-show-actions");
 
-showActions.addEventListener("click", function() {
+let array = new Array();
+
+buttonShowActions.addEventListener("click", function() {
+  document.getElementById("actions-section").removeAttribute("hidden");
+
   Object.keys(ACTION_UTILS).forEach(action => {
-    let actionContainer = document.createElement("div");
-    let actionName = document.createElement("p");
-    let phi = document.createElement("p");
-
-    actionName.innerHTML = ACTION_UTILS[action]["name"];
-    phi.innerHTML = ACTION_UTILS[action]["phi"];
-    
-    actionContainer.appendChild(actionName);
-    actionContainer.appendChild(phi);
-    actionsContainer.appendChild(actionContainer);
+    array.push(ACTION_UTILS[action]);
   }, false);
+
+  sortArray(array).forEach(action => {
+    let actionContainer = document.createElement("div");
+    let actionDiv = document.createElement("div");
+    let height = 300/action.phi;
+    actionDiv.style.height = ( height > 0) ? height + "px": height * -1 + "px";
+    console.log('actionDiv.style.height :', actionDiv.style.height);
+    actionDiv.style.width = screen.width / (array.length - 1) + "px";
+    actionDiv.style.color = "black";
+
+    // phi.onclick = function() {
+    //   alert("Hello");
+    // };
+
+    actionContainer.appendChild(actionDiv);
+    actionsContainer.appendChild(actionContainer);
+  });
 });
+
+/**
+ *
+ * @param {JS Object} array
+ */
+function sortArray(array) {
+  let swap = true;
+
+  while (swap) {
+    swap = false;
+
+    for (let index = 0; index < array.length - 1; index++) {
+      if (array[index]["phi"] > array[index + 1]["phi"]) {
+        let aux = array[index];
+        array[index] = array[index + 1];
+        array[index + 1] = aux;
+        swap = true;
+      }
+    }
+  }
+  return array;
+}
