@@ -7,31 +7,64 @@ let actionsContainer = document.getElementById("actions-container");
 
 let buttonShowActions = document.getElementById("button-show-actions");
 
+let firstTime = true;
+
 let array = new Array();
 
 buttonShowActions.addEventListener("click", function() {
-  document.getElementById("actions-section").removeAttribute("hidden");
 
-  Object.keys(ACTION_UTILS).forEach(action => {
-    array.push(ACTION_UTILS[action]);
-  }, false);
+    if (firstTime) {
 
-  sortArray(array).forEach(action => {
-    let actionContainer = document.createElement("div");
-    let actionDiv = document.createElement("div");
-    let height = 300/action.phi;
-    actionDiv.style.height = ( height > 0) ? height + "px": height * -1 + "px";
-    console.log('actionDiv.style.height :', actionDiv.style.height);
-    actionDiv.style.width = screen.width / (array.length - 1) + "px";
-    actionDiv.style.color = "black";
+        document.getElementById("actions-section").removeAttribute("hidden");
 
-    // phi.onclick = function() {
-    //   alert("Hello");
-    // };
+        Object.keys(ACTION_UTILS).forEach(action => {
+            array.push(ACTION_UTILS[action]);
+        }, false);
 
-    actionContainer.appendChild(actionDiv);
-    actionsContainer.appendChild(actionContainer);
-  });
+        const container = document.getElementById("actions-container");
+        const containerCss = getComputedStyle(container);
+        const height = parseInt(containerCss.height);
+        const width = parseInt(containerCss.width);
+        let pair = true;
+
+
+        sortArray(array).forEach(action => {
+
+            let actionDiv = document.createElement("div");
+            actionDiv.style.height = ((action.phi + 1) * height) / 2 + "px";
+            actionDiv.style.width = width / (array.length) + "px";
+            actionDiv.style.background = (pair) ? "blue" : "black";
+            pair = !pair;
+
+            actionDiv.onclick = function() {
+
+                const modal = document.getElementsByClassName("modal")[0];
+                modal.removeAttribute("hidden");
+                const modalCss = getComputedStyle(modal);
+                //modalCss.display = "block";
+                modal.style.display = "block";
+
+
+                const modalContent = document.getElementsByClassName("modal-content")[0];
+
+                modalContent.children[0].onclick = onCloseModal;
+                modalContent.children[1].innerHTML = action.name;
+                modalContent.children[2].innerHTML = action.correlationTable;
+                modalContent.children[3].innerHTML = action.phi;
+            };
+
+            container.appendChild(actionDiv);
+        });
+
+        firstTime = false;
+
+    } else {
+
+        document.getElementById("actions-section").hidden = !document.getElementById("actions-section").hidden;
+
+    }
+
+
 });
 
 /**
@@ -39,19 +72,24 @@ buttonShowActions.addEventListener("click", function() {
  * @param {JS Object} array
  */
 function sortArray(array) {
-  let swap = true;
+    let swap = true;
 
-  while (swap) {
-    swap = false;
+    while (swap) {
+        swap = false;
 
-    for (let index = 0; index < array.length - 1; index++) {
-      if (array[index]["phi"] > array[index + 1]["phi"]) {
-        let aux = array[index];
-        array[index] = array[index + 1];
-        array[index + 1] = aux;
-        swap = true;
-      }
+        for (let index = 0; index < array.length - 1; index++) {
+            if (array[index]["phi"] > array[index + 1]["phi"]) {
+                let aux = array[index];
+                array[index] = array[index + 1];
+                array[index + 1] = aux;
+                swap = true;
+            }
+        }
     }
-  }
-  return array;
+    return array;
+}
+
+function onCloseModal() {
+    const modal = document.getElementsByClassName("modal")[0];
+    modal.style.display = "none";
 }

@@ -1,83 +1,169 @@
 /* ---- MAIN ---- */
+
 main {
-  position: relative;
-  min-height: 69vh;
-  padding-bottom: 50px;
+    position: relative;
+    min-height: 69vh;
+    padding-bottom: 50px;
 }
+
+
 /* ---- 1st SECTION - DESCRIPTION ---- */
+
 #intro {
-  text-align: center;
-  font-weight: bold;
+    text-align: center;
+    font-weight: bold;
 }
+
+
 /* ---- END 1st SECTION - DESCRIPTION ---- */
+
 
 /* ---- 2nd SECTION ---- */
 
+
 /* ---- COL ---- */
+
 #button-col {
-  text-align: center;
-  z-index: 1;
-  border: none;
-  overflow: hidden;
-  transition: color 0.4s ease-in-out;
+    text-align: center;
+    z-index: 1;
+    border: none;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
 }
+
+
 /* ---- END COL ---- */
 
+
 /* ---- BUTTON ---- */
+
 #button-show-actions {
-  border: none;
-  background: var(--main-color-maastricht_blue) !important;
-  background: var(--main-color-maastricht_blue) !important;
-  background: var(--main-color-maastricht_blue) !important;
-  background: var(--main-color-maastricht_blue) !important;
-  z-index: 1;
-  position: relative;
-  transition: color 0.4s ease-in-out;
-}
-#button-show-actions:hover p {
-  color: white;
-}
-#button-show-actions::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background-color: var(--main-color-heliotrope);
-  transform-origin: center;
-  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-  transition: transform 0.45s ease-in-out;
-}
-#button-show-actions:hover {
-  cursor: pointer;
-}
-#button-show-actions:hover::before {
-  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
-}
-#button-show-actions:focus {
-  border: none;
+    border: none;
+    background: var(--main-color-maastricht_blue) !important;
+    background: var(--main-color-maastricht_blue) !important;
+    background: var(--main-color-maastricht_blue) !important;
+    background: var(--main-color-maastricht_blue) !important;
+    z-index: 1;
+    position: relative;
+    transition: color 0.4s ease-in-out;
 }
 
-/* ---- TEXT ---- */
-#show-actions {
-  position: relative;
-  top: 5px;
-  color: var(--main-color-heliotrope);
-  font-weight: bold;
-  font-size: larger;
+#button-show-actions:hover p {
+    color: white;
 }
+
+#button-show-actions::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--main-color-heliotrope);
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+}
+
+#button-show-actions:hover {
+    cursor: pointer;
+}
+
+#button-show-actions:hover::before {
+    transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+}
+
+#button-show-actions:focus {
+    border: none;
+}
+
+
+/* ---- TEXT ---- */
+
+#show-actions {
+    position: relative;
+    top: 5px;
+    color: var(--main-color-heliotrope);
+    font-weight: bold;
+    font-size: larger;
+}
+
 
 /* ---- Action Container ----*/
 
-
 #actions-container {
-  height: 300px;
+    height: 250px;
+    background: white;
+    border: 3px black solid;
+    display: flex;
+    align-items: flex-end;
 }
+
+
 /* ---- END Action Container ----*/
+
+
 /* ---- END TEXT ---- */
+
+
 /* ---- END BUTTON ---- */
+
+
 /* ---- END 2nd SECTION ---- */
+
+
 /* ---- END MAIN ---- */
+
+
+/* ---- Modal ---- */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    color: black;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* ---- END MODAL ---- */
