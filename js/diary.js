@@ -68,15 +68,21 @@ function displayDay(day) {
       day.pulpo ? "/pop.45fff62b.png" : "/canitaBrava.3e228692.png"
     );
   /**
+   * In this line, we get the <h3> HTML element with id "popor-not" and change its value,
+   * depending on whether Mariano transforms into octopus or not that day.
+   */
+  document.getElementById("pop-or-not").innerHTML = day.pulpo
+    ? "Mariano se transforma"
+    : "Mariano no se transforma";
+  /**
    * Here we get the <p> HTML element with id "eventos" and pass the value of
    * the property "eventos" contained in the actual day.
    */
-  document.getElementById("eventos").innerHTML = day["eventos"];
+  document.getElementById("eventos").innerHTML = day["eventos"].join(", ");
   /**
    * Just because a day has been selected in the calendar, we need to display
    * the card where the information about that day will be seen.
    */
-
   removeHidden(document.getElementById("card-container"));
 }
 

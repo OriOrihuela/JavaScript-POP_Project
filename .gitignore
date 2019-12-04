@@ -6,3 +6,4 @@ node_modules/
 
 # Ignoring development and production folders.
 .cache
+dist

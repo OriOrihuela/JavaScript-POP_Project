@@ -13,6 +13,7 @@ body {
 /* ---- SECTIONS ---- */
 .description {
   text-align: justify;
+  font-size: 22px;
 }
 section.row {
   padding-left: 0;
