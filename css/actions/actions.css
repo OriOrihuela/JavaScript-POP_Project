@@ -82,7 +82,7 @@ main {
   font-size: larger;
 }
 
-/* ---- Action Container ----*/
+/* ---- ACTION CONTAINER ----*/
 
 #actions-container {
   height: 250px;
@@ -92,14 +92,14 @@ main {
   align-items: flex-end;
 }
 
-/* Tooltip container */
+/* ---- TOOLTIP CONTAINER ---- */
 .tooltip {
   position: relative;
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
-/* Tooltip text */
+/* ---- TOOLTIP TEXT ---- */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -109,19 +109,19 @@ main {
   padding: 5px 0;
   border-radius: 6px;
 
-  /* Position the tooltip text */
+  /* ---- POSITION THE TOOLTIP TEXT ---- */
   position: absolute;
   z-index: 1;
   bottom: 125%;
   left: 50%;
   margin-left: -60px;
 
-  /* Fade in tooltip */
+  /* ---- FADE IN TOOLTIP ---- */
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-/* Tooltip arrow */
+/* ---- TOOLTIP ARROW ---- */
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
@@ -133,9 +133,10 @@ main {
   border-color: #555 transparent transparent transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+/* ---- SHOW THE TOOLTIP TEXT WHEN YOUR MOUSE OVER THE TOOLTIP CONTAINER ---- */
 .tooltip:hover {
   background: var(--main-color-vivid_sky_blue) !important;
+  cursor: pointer;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -221,5 +222,10 @@ main {
   .modal-content {
     width: 80%;
     margin-right: 13.9%;
+  }
+}
+@media (max-width: 640px) {
+  #button-col-reverse {
+    margin-top: 4%;
   }
 }
