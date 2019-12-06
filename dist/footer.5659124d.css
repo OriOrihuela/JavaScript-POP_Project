@@ -1,0 +1,71 @@
+/* ---- FOOTER ---- */
+footer div.row {
+  background-color: var(--main-color-maastricht_blue);
+  color: var(--main-color-heliotrope);
+  text-align: center;
+  padding: 1.5%;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0px 5px 10px var(--main-color-maastricht_blue);
+}
+footer ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding-left: 8%;
+}
+footer ul li a {
+  text-decoration: none;
+  font-size: 1em;
+}
+footer ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #fff;
+  transition: width 0.3s;
+}
+footer ul li a:hover {
+  color: white !important;
+}
+footer ul li a:visited {
+  color: var(--main-color-heliotrope);
+}
+footer ul li a:hover:after {
+  width: 100%;
+  z-index: 100;
+}
+.copyright p {
+  margin-top: 0;
+}
+.copyright:nth-child(2) a {
+  color: var(--main-color-heliotrope);
+  text-decoration: none;
+  cursor: pointer;
+}
+.copyright img {
+  width: 15px;
+  height: 15px;
+}
+.location-date p {
+  margin-top: 0;
+}
+/* ---- END FOOTER ---- */
+
+/* ---- MEDIA QUERIES ---- */
+@media (max-width: 640px) {
+  #authors {
+    margin-bottom: 0;
+  }
+  #copy-hash {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .copyright:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}
+
+
+/*# sourceMappingURL=/footer.5659124d.css.map */
