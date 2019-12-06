@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>POP - Acciones</title>
     <link rel="icon" href="./images/icons/pulpo.png" />
-    <link rel="stylesheet" href="./css/index/index.css" />
+    <link rel="stylesheet" href="./css/actions/actions.css" />
     <link rel="stylesheet" href="./css/commonCSS/grid.css" />
     <link rel="stylesheet" href="./css/commonCSS/style.css" />
     <link rel="stylesheet" href="./css/commonCSS/palette.css" />
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/commonCSS/header.css" />
     <link rel="stylesheet" href="./css/commonCSS/html.css" />
   </head>
+
   <body>
     <header>
       <nav class="row">
@@ -32,10 +33,80 @@
     </header>
     <!-- END HEADER -->
 
+    <!-- MAIN -->
+    <main role="main">
+      <section class="row">
+        <div class="col-12">
+          <p id="intro">
+            Vamos a averiguar qué factores son los que más inciden en que
+            Mariano se convierta en pulpo.
+          </p>
+          <p class="description">
+            La Correlación <b>phi φ</b> es una medida de la dependencia entre
+            variables
+            <i
+              >(“variables” en el sentido estadístico, no en el de la
+              programación)</i
+            >. Se expresa como un coeficiente cuyo valor cae en el rango de −1 a
+            1. Correlación 0 significa que las variables no están relacionadas,
+            mientras que correlación 1 significa que las variables están
+            perfectamente relacionadas: si conoces una, conoces el valor de la
+            otra. Correlación con valores negativos, significa que las variables
+            están relacionadas pero que son opuestas: cuando una es cierta, la
+            otra es falsa.
+          </p>
+          <p class="description">
+            Para variables binarias como el caso de las nuestras
+            <i>(pulpo es verdadero o falso, “descansar” es verdadero o falso)</i
+            >, el coeficiente <b>phi (φ)</b> provee una buena medida de la
+            correlación. Para calcularlo, hemos de crear una tabla que contenga
+            el número de veces que se han observado las distintas combinaciones
+            de las variables.
+          </p>
+        </div>
+      </section>
+      <section class="row">
+        <div id="button-col-show" class="col-12">
+          <button id="button-show-actions" class="container buttons">
+            <p class="text">Mostrar Eventos</p>
+          </button>
+        </div>
+        <div id="button-col-reverse" class="col-6" hidden>
+          <button id="button-reverse-actions" class="container buttons">
+            <p class="text">Revertir Eventos</p>
+          </button>
+        </div>
+      </section>
+      <section id="actions-section" class="row" hidden>
+        <div class="col-12">
+          <div id="actions-container"></div>
+        </div>
+
+        <div class="col-12">
+          <div class="modal" hidden>
+            <div class="modal-content">
+              <div>
+                <span class="close">&times;</span>
+                <h1 class="modal-title">placeholder Name</h1>
+              </div>
+              <ul>
+                <li><p></p></li>
+                <li><p></p></li>
+                <li><p></p></li>
+                <li><p></p></li>
+              </ul>
+              <p>placeholder phi</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- END MAIN -->
+
     <!-- FOOTER -->
     <footer>
       <div class="row">
-        <div class="col-6 my-1">
+        <div id="authors" class="col-6 my-1">
           <i>Authors</i>
           <ul>
             <li>
@@ -56,14 +127,32 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 my-1">
-          <i>Copyright</i>
-          <div class="col-12" style="margin-top: 20px;">
-            <button>@lasencinas</button>
+        <div id="copy-hash" class="col-6 my-1">
+          <div class="col-12 copyright">
+            <p>
+              <img src="./images/icons/copyright.svg" alt="copyright" />Las
+              Encinas
+            </p>
           </div>
+          <div class="col-12 copyright">
+            <a
+              href="https://twitter.com/?lang=es"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                src="./images/icons/hashtag.svg"
+                alt="copyright"
+              />MarianoSeConvierte</a
+            >
+          </div>
+        </div>
+        <div class="col-12 location-date">
+          <p>Palma de Mallorca 2019</p>
         </div>
       </div>
     </footer>
     <!-- END FOOTER -->
+    <!-- JS SCRIPT TO PRINT THE DIARY -->
+    <script src="./js/actions.js"></script>
   </body>
 </html>

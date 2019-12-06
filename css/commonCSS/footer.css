@@ -36,29 +36,33 @@ footer ul li a:hover:after {
   width: 100%;
   z-index: 100;
 }
-footer button {
-  z-index: 1;
-  position: relative;
-  font-size: inherit;
-  font-family: inherit;
+.copyright p {
+  margin-top: 0;
+}
+.copyright:nth-child(2) a {
   color: var(--main-color-heliotrope);
-  outline: none;
-  border: none;
-  background-color: var(--main-color-maastricht_blue);
-  overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
 }
-footer button::after {
-  content: "";
-  z-index: -1;
-  background-color: hsla(0, 0%, 100%, 0.2);
-  position: absolute;
-  top: -50%;
-  bottom: -50%;
-  width: 1.25em;
-  transform: translate3d(-525%, 0, 0) rotate(35deg);
+.copyright img {
+  width: 15px;
+  height: 15px;
 }
-footer button:hover::after {
-  transition: transform 0.45s ease-in-out;
-  transform: translate3d(200%, 0, 0) rotate(35deg);
+.location-date p {
+  margin-top: 0;
 }
 /* ---- END FOOTER ---- */
+
+/* ---- MEDIA QUERIES ---- */
+@media (max-width: 640px) {
+  #authors {
+    margin-bottom: 0;
+  }
+  #copy-hash {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .copyright:nth-child(2) {
+    margin-bottom: 20px;
+  }
+}

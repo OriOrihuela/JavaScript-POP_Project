@@ -1,27 +1,32 @@
 /* ---- MAIN ---- */
-/* ---- 2ND SECTION ---- */
-#main-pop {
-  height: 100%;
-  width: 100%;
+
+/* ---- COMMON CSS ---- */
+figure {
+  margin-right: 0;
+  margin-left: 0;
 }
-#main-pop-text {
+figcaption {
   font-weight: bold;
   text-align: center;
   font-size: larger;
 }
-/* ---- END 2ND SECTION ---- */
-
-/* ---- SHARED CSS BETWEEN SECTIONS ---- */
-.description {
-  text-align: justify;
+img {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
 }
-/* ---- END OF SHARED CSS BETWEEN SECTIONS ---- */
-/* ---- END MAIN ---- */
+.title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 0;
+}
+/* ---- END COMMON CSS ---- */
 
 /*---  BUBBLES ---*/
 .bubbles-container {
   position: absolute;
-  top: 0;
+  top: 130%;
   left: 50%;
   width: 100%;
   max-width: 15rem;
