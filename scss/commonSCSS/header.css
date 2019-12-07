@@ -1,0 +1,125 @@
+/* ---- HEADER ---- */
+nav {
+  background-color: var(--main-color-vivid_sky_blue);
+  -webkit-box-shadow: 10px 5px 10px var(--main-color-maastricht_blue);
+          box-shadow: 10px 5px 10px var(--main-color-maastricht_blue);
+  border-radius: 20px;
+  padding: 0.43%;
+}
+
+nav div.col-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.5%;
+}
+
+nav button {
+  background-color: var(--main-color-vivid_sky_blue);
+  border: none;
+}
+
+nav button a img {
+  width: 4.6875em;
+  height: 4.6875em;
+}
+
+nav button:hover {
+  cursor: pointer;
+  -webkit-animation: jelly 0.5s;
+          animation: jelly 0.5s;
+}
+
+nav button a {
+  text-decoration: none;
+  color: var(--main-color-maastricht_blue) !important;
+}
+
+nav ul {
+  list-style: none;
+  display: contents;
+}
+
+nav ul li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-weight: bold;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--main-color-maastricht_blue) !important;
+  cursor: pointer;
+  font-size: 1.25em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+nav ul li a:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background: #000;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+}
+
+nav ul li a:hover {
+  color: white !important;
+}
+
+nav ul li a:hover:after {
+  width: 100%;
+  z-index: 100;
+}
+
+/* ---- BUTTON POP ---- */
+/* ---- END BUTTON POP ---- */
+/* ---- LINKS ---- */
+/* ---- END LINKS ---- */
+/* ---- END HEADER ---- */
+/* ---- ANIMATIONS ---- */
+@-webkit-keyframes jelly {
+  0%,
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+}
+@keyframes jelly {
+  0%,
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+            transform: scale(0.95, 1.05);
+  }
+}
+
+/* ---- END ANIMATIONS ---- */
+/*# sourceMappingURL=header.css.map */

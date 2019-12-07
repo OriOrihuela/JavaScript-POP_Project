@@ -1,0 +1,79 @@
+@import "../diary/diary.scss";
+@import "../actions/actions.scss";
+@import "../index/index.scss";
+@import "./footer.scss";
+@import "./grid.scss";
+@import "./header.scss";
+@import "./palette.scss";
+
+html,
+body {
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  background-image: linear-gradient(to bottom, #00c9ff 0%, #92fe9d 100%),
+    url(https://images.unsplash.com/photo-1502726299822-6f583f972e02);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* ---- SECTIONS ---- */
+
+.description {
+  text-align: justify;
+  font-size: 22px;
+}
+
+section.row {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* ---- END SECTIONS ---- */
+/* ---- MAIN & BOXES ---- */
+
+main {
+  padding-top: 50px;
+
+  .row {
+    margin-bottom: 20px;
+  }
+}
+
+.box {
+  height: 200px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+/* ---- END MAIN & BOXES ---- */
+/* ---- CONTAINER ---- */
+
+.container {
+  border-radius: 5px;
+  overflow: hidden;
+  display: block;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px #201d1c;
+  margin: 0 auto;
+  padding: 0 10px 10px 10px;
+  background: -webkit-linear-gradient(
+    var(--main-color-vivid_sky_blue),
+    var(--main-color-heliotrope)
+  );
+  background: -o-linear-gradient(
+    var(--main-color-vivid_sky_blue),
+    var(--main-color-heliotrope)
+  );
+  background: -moz-linear-gradient(
+    var(--main-color-vivid_sky_blue),
+    var(--main-color-heliotrope)
+  );
+  background: linear-gradient(
+    var(--main-color-vivid_sky_blue),
+    var(--main-color-heliotrope)
+  );
+}
+
+/* ---- END CONTAINER ---- */

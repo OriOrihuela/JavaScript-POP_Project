@@ -849,7 +849,15 @@ function getHeightAndWidth(container) {
 
 function createActionDiv(action) {
   // Create a <div> element.
-  var actionDiv = document.createElement("div"); // Here we add the "height" value of the <div> element depending of the action PHI value.
+  var actionDiv = document.createElement("div"); // Add a new class to the <div> element.
+
+  actionDiv.classList.add("tooltip");
+  /**
+   * Here we add the "height" value of the <div> element depending of the action PHI value.
+   * To calculate the negative phi values, what we do is to sum + 1 to the actual phi value to avoid
+   * negative height. Then, we just calculate the height and set it to the <div> multiplying it by
+   * "actionsContainerHeight".
+   */
 
   actionDiv.style.height = (action.phi + 1) * actionsContainerHeight / 2 + "px";
   /**
@@ -859,10 +867,7 @@ function createActionDiv(action) {
 
   actionDiv.style.width = actionsContainerWidth / array.length + "px"; // Just add to the <div> some style.
 
-  actionDiv.style.background = pair ? "var(--main-color-heliotrope)" : "var(--main-color-maastricht_blue)";
-  actionDiv.style.borderTopLeftRadius = 20 + "px";
-  actionDiv.style.borderTopRightRadius = 20 + "px";
-  actionDiv.classList.add("tooltip"); // Return the <div> element.
+  actionDiv.style.background = pair ? "var(--main-color-heliotrope)" : "var(--main-color-cyber_grape)"; // Return the <div> element.
 
   return actionDiv;
 }
@@ -911,7 +916,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58526" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52022" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
