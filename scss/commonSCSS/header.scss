@@ -1,0 +1,102 @@
+/* ---- HEADER ---- */
+
+nav {
+  background-color: var(--main-color-vivid_sky_blue);
+  box-shadow: 10px 5px 10px var(--main-color-maastricht_blue);
+  border-radius: 20px;
+  padding: 0.43%;
+
+  div.col-12 {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5%;
+  }
+
+  button {
+    background-color: var(--main-color-vivid_sky_blue);
+    border: none;
+
+    a img {
+      width: 4.6875em;
+      height: 4.6875em;
+    }
+
+    &:hover {
+      cursor: pointer;
+      animation: jelly 0.5s;
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--main-color-maastricht_blue) !important;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: contents;
+
+    li {
+      align-self: center;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+        color: var(--main-color-maastricht_blue) !important;
+        cursor: pointer;
+        font-size: 1.25em;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 3px;
+          background: #000;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+            z-index: 100;
+          }
+
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+/* ---- BUTTON POP ---- */
+
+/* ---- END BUTTON POP ---- */
+
+/* ---- LINKS ---- */
+
+/* ---- END LINKS ---- */
+/* ---- END HEADER ---- */
+
+/* ---- ANIMATIONS ---- */
+@keyframes jelly {
+  0%,
+  100% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+
+/* ---- END ANIMATIONS ---- */

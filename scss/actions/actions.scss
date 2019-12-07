@@ -40,40 +40,41 @@ main {
   z-index: 1;
   position: relative;
   transition: color 0.4s ease-in-out;
-}
 
-.buttons:hover p {
-  color: white;
-}
+  &:hover p {
+    color: white;
+  }
 
-.buttons::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1em;
-  height: 1em;
-  border-radius: 50%;
-  background-color: var(--main-color-heliotrope);
-  transform-origin: center;
-  transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
-  transition: transform 0.45s ease-in-out;
-}
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--main-color-heliotrope);
+    transform-origin: center;
+    transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+  }
 
-.buttons:hover {
-  cursor: pointer;
-}
+  &:hover {
+    cursor: pointer;
 
-.buttons:hover::before {
-  transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
-}
+    &::before {
+      transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
+    }
+  }
 
-.buttons:focus {
-  border: none;
+  &:focus {
+    border: none;
+  }
 }
 
 /* ---- TEXT ---- */
+
 .text {
   position: relative;
   top: 5px;
@@ -93,55 +94,61 @@ main {
 }
 
 /* ---- TOOLTIP CONTAINER ---- */
+
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+
+  .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* ---- POSITION THE TOOLTIP TEXT ---- */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+
+    /* ---- FADE IN TOOLTIP ---- */
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+  }
+
+  &:hover {
+    background: var(--main-color-vivid_sky_blue) !important;
+    cursor: pointer;
+
+    .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 }
 
 /* ---- TOOLTIP TEXT ---- */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-
-  /* ---- POSITION THE TOOLTIP TEXT ---- */
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-
-  /* ---- FADE IN TOOLTIP ---- */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
 
 /* ---- TOOLTIP ARROW ---- */
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
 
 /* ---- SHOW THE TOOLTIP TEXT WHEN YOUR MOUSE OVER THE TOOLTIP CONTAINER ---- */
-.tooltip:hover {
-  background: var(--main-color-vivid_sky_blue) !important;
-  cursor: pointer;
-}
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-}
 
 /* ---- END Action Container ----*/
 
@@ -157,31 +164,41 @@ main {
 
 .modal {
   display: none;
+
   /* Hidden by default */
   position: fixed;
+
   /* Stay in place */
   z-index: 1;
+
   /* Sit on top */
   left: 0;
   top: 0;
   width: 100%;
+
   /* Full width */
   height: 100%;
+
   /* Full height */
   overflow: auto;
+
   /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
+
   /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
+
   /* Black w/ opacity */
 }
 
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto;
+
   /* 15% from the top and centered */
   border: 5px solid rgb(196, 190, 190);
   width: 50%;
+
   /* Could be more or less, depending on screen size */
   color: black;
   border-radius: 20px;
@@ -195,13 +212,13 @@ main {
   font-weight: bold;
   position: relative;
   right: 5px;
-}
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .modal-title {
@@ -224,6 +241,7 @@ main {
     margin-right: 13.9%;
   }
 }
+
 @media (max-width: 640px) {
   #button-col-reverse {
     margin-top: 4%;
