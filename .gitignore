@@ -6,3 +6,6 @@ node_modules/
 
 # Ignoring development and production folders.
 .cache
+dist
+scss/*/*.css
+scss/*/*.map
