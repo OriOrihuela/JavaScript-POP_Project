@@ -206,7 +206,7 @@ function clearPhiValues(container) {
  */
 function showEvents() {
   // Once the events are shown, change the <button> string value.
-  BUTTON_SHOW_ACTIONS.firstElementChild.innerHTML = "Ocultar Eventos";
+  BUTTON_SHOW_ACTIONS.innerHTML = "Ocultar Eventos";
   // Change some CSS and "class" attributes of the buttons.
   document.getElementById("button-col-show").classList.remove("col-12");
   document.getElementById("button-col-show").classList.add("col-6");
@@ -217,7 +217,7 @@ function showEvents() {
  */
 function hideEvents() {
   // Once the events are shown, change the <button> string value.
-  BUTTON_SHOW_ACTIONS.firstElementChild.innerHTML = "Mostrar Eventos";
+  BUTTON_SHOW_ACTIONS.innerHTML = "Mostrar Eventos";
   // Change some CSS and "class" attributes of the buttons.
   document.getElementById("button-col-show").classList.remove("col-6");
   document.getElementById("button-col-show").classList.add("col-12");
