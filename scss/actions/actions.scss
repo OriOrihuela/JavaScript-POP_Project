@@ -40,8 +40,12 @@ main {
   z-index: 1;
   position: relative;
   transition: color 0.4s ease-in-out;
+  padding: 2% !important;
+  font-size: large;
+  font-weight: bold;
+  color: var(--main-color-heliotrope);
 
-  &:hover p {
+  &:hover {
     color: white;
   }
 
@@ -71,16 +75,6 @@ main {
   &:focus {
     border: none;
   }
-}
-
-/* ---- TEXT ---- */
-
-.text {
-  position: relative;
-  top: 5px;
-  color: var(--main-color-heliotrope);
-  font-weight: bold;
-  font-size: larger;
 }
 
 /* ---- ACTION CONTAINER ----*/

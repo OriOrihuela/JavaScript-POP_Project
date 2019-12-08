@@ -12,23 +12,13 @@ nav {
     padding: 0.5%;
   }
 
-  button {
-    background-color: var(--main-color-vivid_sky_blue);
-    border: none;
-
-    a img {
-      width: 4.6875em;
-      height: 4.6875em;
-    }
+  #pop {
+      width: 75px;
+      height: 75px;
 
     &:hover {
       cursor: pointer;
       animation: jelly 0.5s;
-    }
-
-    a {
-      text-decoration: none;
-      color: var(--main-color-maastricht_blue) !important;
     }
   }
 
