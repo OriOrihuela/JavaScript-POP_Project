@@ -187,6 +187,22 @@ Las tecnologías usadas para llevar a cabo ésta aplicación son:
   - **Exportar y compartir** -> exporta tus paletas en varios formatos útiles como `PNG`, `PDF`, `SCSS`, `SVG` o copia las URL permanentes.
   - **Colección de paletas** -> crea tu perfil y mantén todos tus esquemas de colores bien organizados con nombre y etiquetas.
   - **Colores en la nube** -> inicia sesión en tu cuenta y accede a tus creaciones en cualquier parte.
+- **Snyk** -> herramienta para encontrar y corregir vulnerabilidades conocidas en dependencias de código abierto. Se centra en evaluar el código de tus desarrollos, automatizando la búsqueda y reparación de vulnerabilidades en las dependencias.
+  
+  En la actualidad es capaz de evaluar vulnerabilidades de lenguajes como JavaScript, Node, Java, Python, Ruby, Go, PHP.... Y podrás cualificar la seguridad de tu código directamente desde tu control de versiones como GitHub, GitLab o Bitbucket, o también puedes instalar su CLI para evaluar un entorno local.
+
+  `Snyk` se encarga de monitorear continuamente las dependencias de tu aplicación y te permite responder rápidamente cuando se descubran nuevas vulnerabilidades. Sus principales características son: 
+  - **Búsqueda de vulnerabilidades** -> mapeando tu aplicación en busca de vulnerabilidades basadas en una completa base de firmas gestionada y validada por el equipo de `Snyk`.
+  
+  - **Reparación de vulnerabilidades** -> es capaz de actualizar tu repositorio con alguna vulnerabilidad, con una nueva versión sin vulnerabilidades, parcheando con precisión, por ejemplo, el archivo `package.json`, o Gemfile de tu proyecto (un formato para describir `gem dependencies` para Ruby).
+  - **Prevención** -> puedes integrar `Snyk` en algunos *IDE* para identificar vulnerabilidades, además de ofrecerte librerias sin vulnerabilidades mientras desarrollas tu aplicación.
+  - **Alertas** -> puedes programar las alertas por email, *Slack* o *Jira* para estar informando de nuevas vulnerabilidades que afecten a tus proyectos.
+  
+  Bajo la premisa de la **_integración continua_**, (*reducir el riesgo*), es importante integrar una solución como `Snyk` en busca de vulnerabilidades antes de desplegar código. Así desde el inicio, se protege el ciclo de vida de la aplicación, desde el desarrollo hasta su implementación. `Snyk` tiene la capacidad de integrarse con herramientas como:
+  - **Control de versiones**: -> evaluando cada uno de tus repositorios, en plataformas como *GitHub*, *GitLab* o *Bitbucket*, o también puedes instalar su `CLI` para evaluar un entorno local.
+  
+  - **Herramienta de integración continua y entrega continua** -> facilitando la integración con tu herramientas como *Jenkins*, *Teamcity*, *Travis*, etc.
+  - **PAAS y serverless**: conectando con _Heroku_, *Cloud Foundry*, *AWS Lambda*, entre otros, para validar tus aplicaciones en desplegadas en producción.
 
 [_Volver al índice_](#indice)
 
