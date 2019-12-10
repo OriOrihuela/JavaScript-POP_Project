@@ -22,7 +22,7 @@ footer {
     li a {
       text-decoration: none;
       font-size: 1em;
-
+      color: var(--main-color-heliotrope) !important;
       &:after {
         content: "";
         display: block;

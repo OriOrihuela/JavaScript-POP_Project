@@ -13,49 +13,41 @@ nav {
   }
 
   #pop {
-      width: 75px;
-      height: 75px;
+    width: 75px;
+    height: 75px;
 
     &:hover {
       cursor: pointer;
       animation: jelly 0.5s;
     }
   }
-
-  ul {
+  
+  .links {
+    text-decoration: none;
     list-style: none;
-    display: contents;
+    align-self: center;
+    font-weight: bold;
+    color: var(--main-color-maastricht_blue) !important;
+    cursor: pointer;
+    font-size: 1.25em;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 
-    li {
-      align-self: center;
-      font-weight: bold;
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 3px;
+      background: #000;
+      transition: width 0.3s;
+    }
 
-      a {
-        text-decoration: none;
-        color: var(--main-color-maastricht_blue) !important;
-        cursor: pointer;
-        font-size: 1.25em;
-        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-          "Lucida Sans", Arial, sans-serif;
-
-        &:after {
-          content: "";
-          display: block;
-          width: 0;
-          height: 3px;
-          background: #000;
-          transition: width 0.3s;
-        }
-
-        &:hover {
-          &:after {
-            width: 100%;
-            z-index: 100;
-          }
-
-          color: white !important;
-        }
+    &:hover {
+      &:after {
+        width: 100%;
+        z-index: 100;
       }
+
+      color: white !important;
     }
   }
 }

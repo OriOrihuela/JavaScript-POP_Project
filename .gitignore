@@ -4,9 +4,9 @@
 # Avoid node_modules folder.
 node_modules/
 
-# Ignoring development and production folders.
+# Ignoring development and production folders (If need to deploy to Heroku, comment the "dist" line).
 .cache
-dist
+# dist
 
 # Ignoring SCSS compiled files.
 *.css.map

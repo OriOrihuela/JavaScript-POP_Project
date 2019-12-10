@@ -83,14 +83,5 @@ function displayDay(day) {
    * Just because a day has been selected in the calendar, we need to display
    * the card where the information about that day will be seen.
    */
-  removeHidden(document.getElementById("card-container"));
-}
-
-/**
- * This function checks if the element passed by parameter has the attr "hidden" set.
- * If so, removes the attr.
- * @param {HTMLElement} element
- */
-function removeHidden(element) {
-  if (element.hasAttribute("hidden")) element.removeAttribute("hidden");
+  document.getElementById("card-container").style.display = "block";
 }
